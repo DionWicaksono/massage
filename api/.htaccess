@@ -1,0 +1,10 @@
+# Deny direct access to config file
+<Files "config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Ensure PHP files execute
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
